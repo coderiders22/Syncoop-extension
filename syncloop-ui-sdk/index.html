@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncloop UI Editor</title>
+    <style>
+        #syncloop {
+            width: 100%;
+            height: 100vh;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="syncloop"></div>
+
+    <!-- jQuery Include Karo -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Syncloop SDK Include Karo -->
+    <script src="http://localhost:8080/files/gui/middleware/pub/server/ui/javascript/syncloop.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#syncloop").syncloop({
+                unique_id: "123e4567-e89b-12d3-a456-426614174000", // Static UUID
+                test: true,
+                export: true,
+                import: true,
+                documentation: true,
+                save: true,
+                save_callback: function(data) {
+                    console.log("Service data:", data);
+                    // Data save karne ka code yahan daal sakte ho
+                },
+                load_service_callback: function() {
+                    return {}; // Saved service data yahan return karo
+                },
+                width: '100%',
+                height: '100%',
+                config: {
+                    service: {
+                        list_options: {
+                            embedded_services_label: "embedded",
+                            embedded_services_context: "contexts",
+                            embedded_services_function: "functions"
+                        }
+                    }
+                },
+                service_base_url: "http://localhost:3000/api" // API server ka URL
+            });
+        });
+    </script>
+</body>
+</html>
