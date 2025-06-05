@@ -20,13 +20,12 @@ The **Syncoop Extension** brings the Syncloop UI Editor into Visual Studio Code 
 - [Packaging & Distribution](#packaging--distribution)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
 
-## ✨ Features
+## ✨ Features (#license)
 
 - **Embedded Syncloop UI**: Access the Syncloop Editor directly within a VS Code Webview.
 - **Local Data Persistence**: Automatically saves API service configurations to `syncloop-service.json` in your workspace.
