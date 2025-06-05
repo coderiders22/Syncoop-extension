@@ -1,0 +1,53 @@
+{
+  "name": "syncoop-extension",
+  "displayName": "Syncoop Extension",
+  "description": "A VS Code extension to display Syncloop UI editor in a webview",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:syncoop-extension.show"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syncoop-extension.show",
+        "title": "Show Syncloop Webview"
+      }
+    ],
+    "configuration": {
+      "title": "Syncoop Extension",
+      "properties": {
+        "syncoop.serviceBaseUrl": {
+          "type": "string",
+          "default": "http://localhost:8080",
+          "description": "The base URL for the Syncloop server runtime."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.89.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manavrai/Syncoop-extension.git"
+  },
+  "license": "MIT"
+}
