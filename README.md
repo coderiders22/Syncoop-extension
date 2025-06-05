@@ -69,7 +69,7 @@ Before installation, ensure the following requirements are met:
 
 ### 1. Download `.vsix` Package
 
-Get the latest release from the [Releases](#) section or request it from the maintainer.
+Get the latest release from the [Releases](https://github.com/coderiders22/Syncoop-extension/tree/10efb6b84daa8814307282cb2eb0302a7a5f2f29/Releases) section or request it from the maintainer.
 
 ### 2. Install in Visual Studio Code
 
