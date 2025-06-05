@@ -125,9 +125,9 @@ This allows connection to alternative environments (e.g., staging or production)
 
 Want to contribute or explore the source code? Follow these steps:
 
-bash
+```bash
 # Clone the repository
-git clone https://github.com/coderiders22/Syncoop-extension.git
+git clone https://github.com/manavrai/Syncoop-extension.git
 cd Syncoop-extension
 
 # Install dependencies
@@ -138,10 +138,6 @@ code .
 
 # Launch the Extension Host
 # (Press F5 in the IDE to open a development sandbox)
-
-> Tip: Run the `Show Syncloop Webview` command in the sandbox to test the integration.
-
----
 ## 📲 Packaging & Distribution
 
 To package the extension for local installation or distribution:
