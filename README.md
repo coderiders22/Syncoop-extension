@@ -141,30 +141,14 @@ code .
 
 > Tip: Run the `Show Syncloop Webview` command in the sandbox to test the integration.
 
-
-
-
+---
 ## 📲 Packaging & Distribution
 
 To package the extension for local installation or distribution:
-
-```bash
+bash
 npx @vscode/vsce package
-```
-
 This generates:
 `syncoop-extension-0.0.1.vsix`
-
-### Optional: Publish to the Marketplace
-
-1. Create a publisher at [marketplace.visualstudio.com](https://marketplace.visualstudio.com/)
-2. Run:
-
-```bash
-npx @vscode/vsce publish
-```
-
----
 
 ## 🐞 Troubleshooting
 
