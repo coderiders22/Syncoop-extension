@@ -65,7 +65,7 @@ Ensure the following are set up before installing:
 
 ---
 > [!IMPORTANT]
-## 📦 Installation
+> **📦 Installation**
 
 ### 1. Download the `.vsix` Package
 Obtain the latest release from the [Releases](https://github.com/coderiders22/Syncoop-extension/tree/10efb6b84daa8814307282cb2eb0302a7a5f2f29/Releases) section or request it from the maintainer.
