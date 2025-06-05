@@ -1,10 +1,10 @@
-# 🚀 Syncoop Extension for Visual Studio Code
+# 🚀 Syncloop Extension for Visual Studio Code
 
 > Seamlessly integrate the **Syncloop UI Editor** into Visual Studio Code for intuitive and powerful API service development — directly within your IDE.
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.89.0+-007ACC?logo=visualstudiocode) ![Node.js](https://img.shields.io/badge/Node.js-18.x+-3C873A?logo=node.js) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-The **Syncoop Extension** brings the Syncloop UI Editor into Visual Studio Code via a Webview, delivering a robust and user-friendly experience for API development. With features like local data persistence, configurable server endpoints, and secure sandboxing, it’s designed for performance, scalability, and modern workflows.
+The **Synlcoop Extension** brings the Syncloop UI Editor into Visual Studio Code via a Webview, delivering a robust and user-friendly experience for API development. With features like local data persistence, configurable server endpoints, and secure sandboxing, it’s designed for performance, scalability, and modern workflows.
 
 ---
 
