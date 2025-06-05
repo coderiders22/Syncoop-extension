@@ -1,10 +1,10 @@
-# 🚀 Syncloop Extension for Visual Studio Code
+# 🚀 Syncoop Extension for Visual Studio Code
 
 > Seamlessly integrate the **Syncloop UI Editor** into Visual Studio Code for intuitive and powerful API service development — directly within your IDE.
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.89.0+-007ACC?logo=visualstudiocode) ![Node.js](https://img.shields.io/badge/Node.js-18.x+-3C873A?logo=node.js) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-The **Synlcoop Extension** brings the Syncloop UI Editor into Visual Studio Code via a Webview, delivering a robust and user-friendly experience for API development. With features like local data persistence, configurable server endpoints, and secure sandboxing, it’s designed for performance, scalability, and modern workflows.
+The **Syncoop Extension** brings the Syncloop UI Editor into Visual Studio Code via a Webview, delivering a robust and user-friendly experience for API development. With features like local data persistence, configurable server endpoints, and secure sandboxing, it’s designed for performance, scalability, and modern workflows.
 
 ---
 
@@ -81,7 +81,32 @@ Obtain the latest release from the [Releases](https://github.com/coderiders22/Sy
 ## 🚀 Usage
 
 ### Step 1: Start the Syncloop Server
-Verify that the Syncloop backend is running at `http://localhost:8080`.
+The Syncloop backend must be running at `http://localhost:8080` for the extension to function. Follow these steps to set up and run the server:
+
+1. **Clone or access the Syncloop UI SDK**:
+   Ensure you have the `syncloop-ui-sdk` repository. If you don’t have it, contact the repository maintainer for access or setup instructions.
+   ```bash
+   git clone <syncloop-ui-sdk-repository-url>
+   ```
+
+2. **Navigate to the Syncloop UI SDK directory**:
+   ```bash
+   cd path/to/syncloop-ui-sdk
+   ```
+
+3. **Install `http-server`** (if not already installed):
+   ```bash
+   npm install -g http-server
+   ```
+
+4. **Start the server**:
+   In the `syncloop-ui-sdk` directory, run:
+   ```bash
+   http-server
+   ```
+   This starts the Syncloop server at `http://localhost:8080`. Verify by opening `http://localhost:8080` in your browser to ensure the Syncloop UI Editor loads correctly.
+
+**Important**: The server must be running before launching the extension. Keep the terminal with `http-server` active during use.
 
 ### Step 2: Open a Workspace
 Open a folder in VS Code (`File > Open Folder`) to enable configuration saving.
@@ -148,7 +173,7 @@ This generates: `syncoop-extension-0.0.1.vsix`
 
 | Issue                     | Resolution                                                                 |
 |---------------------------|---------------------------------------------------------------------------|
-| **Webview not loading**   | Ensure the Syncloop server is running and the URL is correct. Check logs in the Extension Host Output panel. |
+| **Webview not loading**   | Ensure the Syncloop server is running at `http://localhost:8080`. Check logs in the Extension Host Output panel. |
 | **Data not saving**       | Verify a workspace folder is open and write permissions are granted.       |
 | **CORS/Connection Errors**| Confirm the Syncloop server allows cross-origin requests from VS Code’s origin. |
 
@@ -170,7 +195,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - **Manav Rai** — Project Author & Maintainer
 - **Syncloop Team** — For the editor framework and SDK
@@ -178,5 +203,3 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ---
 
 For feedback or support, [open an issue](https://github.com/coderiders22/Syncoop-extension/issues) or contact the maintainer at: `manavrai454@gmail.com`
-
----
