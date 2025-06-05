@@ -184,27 +184,6 @@ npx @vscode/vsce publish
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions from developers of all backgrounds!
-
-### To contribute:
-
-```bash
-# Fork this repository
-# Create a new branch for your feature
-git checkout -b feature/my-new-feature
-
-# Make changes, commit, and push
-git commit -m "Add my new feature"
-git push origin feature/my-new-feature
-
-# Open a Pull Request on GitHub
-```
-
-Please review our [Contributing Guidelines](CONTRIBUTING.md) before submitting a PR.
-
----
 
 ## 📜 License
 
@@ -221,11 +200,4 @@ Refer to the [LICENSE](LICENSE) file for full terms.
 ---
 
 For feedback, questions, or support, feel free to [open an issue](https://github.com/coderiders22/Syncoop-extension/issues) or contact the maintainer at: `manavrai454@gmail.com`
-
-> *This repository is intended for professional and educational use. Please refrain from redistributing or republishing without proper authorization.*
-
-```
-
----
-
 
