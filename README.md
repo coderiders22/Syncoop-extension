@@ -127,7 +127,7 @@ Want to contribute or explore the source code? Follow these steps:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/manavrai/Syncoop-extension.git](https://github.com/coderiders22/Syncoop-extension)
+git clone [https://github.com/coderiders22/Syncoop-extension.git](https://github.com/coderiders22/Syncoop-extension)
 cd Syncoop-extension
 
 # Install dependencies
@@ -142,17 +142,6 @@ code .
 > Tip: Run the `Show Syncloop Webview` command in the sandbox to test the integration.
 
 ---
-
-### 🧬 Advanced: SDK-Based Embedding (Optional)
-
-The extension uses an iframe by default. To switch to embedding the Syncloop editor via the SDK (`syncloop.min.js`):
-
-1. Modify the `extension.js` logic to use the SDK.
-2. Adjust the Content Security Policy to permit necessary script sources.
-3. Test compatibility thoroughly — especially if removing the backend dependency.
-
----
-
 ## 📲 Packaging & Distribution
 
 To package the extension for local installation or distribution:
@@ -228,7 +217,6 @@ Refer to the [LICENSE](LICENSE) file for full terms.
 
 * **Manav Rai** — Project Author & Maintainer
 * **Syncloop Team** — For the editor framework and SDK
-* **VS Code Team** — For the exceptional tooling and Webview API
 
 ---
 
