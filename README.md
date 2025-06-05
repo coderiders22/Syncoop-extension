@@ -86,7 +86,7 @@ The Syncloop backend must be running at `http://localhost:8080` for the extensio
 1. **Clone or access the Syncloop UI SDK**:
    Ensure you have the `syncloop-ui-sdk` repository. If you don’t have it, contact the repository maintainer for access or setup instructions.
    ```bash
-   git clone <syncloop-ui-sdk-repository-url>
+   git clone <https://github.com/coderiders22/Syncoop-extension>
    ```
 
 2. **Navigate to the Syncloop UI SDK directory**:
