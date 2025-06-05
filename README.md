@@ -137,8 +137,8 @@ Customize the extension via VS Code settings.
 3. Update the **Syncoop: Service Base Url** field to connect to alternative environments (e.g., staging or production).
 
 ---
-
-## 💻 Development Setup
+> [!NOTE]
+> **💻 Development Setup**
 
 To contribute or explore the source code:
 
@@ -158,8 +158,8 @@ code .
 ```
 
 ---
-
-## 📲 Packaging & Distribution
+> [!NOTE]
+> **📲 Packaging & Distribution**
 
 To package the extension for local use or distribution:
 
@@ -170,8 +170,8 @@ npx @vscode/vsce package
 This generates: `syncoop-extension-0.0.1.vsix`
 
 ---
-
-## 🐞 Troubleshooting
+> [!CAUTION]
+> **🐞 Troubleshooting**
 
 | Issue                     | Resolution                                                                 |
 |---------------------------|---------------------------------------------------------------------------|
@@ -197,7 +197,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Manav Rai** — Project Author & Maintainer
 - **Syncloop Team** — For the editor framework and SDK
