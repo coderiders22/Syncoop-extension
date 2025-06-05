@@ -136,11 +136,11 @@ npm install
 code .
 
 # 4. Launch the Extension Development Host
-# Press F5 in VS Code to start a new sandbox environment for testing
+# (Press F5 in VS Code to open a sandbox environment for testing)
 
 # 5. Run the Syncloop Webview
-# In the Extension Development Host, open the Command Palette and run:
-Show Syncloop Webview
+# In the Extension Development Host, open the Command Palette and execute:
+# Show Syncloop Webview
 
 ## 📲 Packaging & Distribution
 
