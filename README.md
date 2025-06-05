@@ -125,22 +125,26 @@ This allows connection to alternative environments (e.g., staging or production)
 
 Want to  explore the source code? Follow these steps:
 
-# 1. Clone the repository
+```bash
+ 1️⃣ Clone the repository
 git clone https://github.com/coderiders22/Syncoop-extension.git
+```
 cd Syncoop-extension
 
-# 2. Install project dependencies
+# 2️⃣ Install dependencies
 npm install
 
-# 3. Open the project in Visual Studio Code
+# 3️⃣ Open the project in Visual Studio Code
 code .
 
-# 4. Launch the Extension Development Host
-# (Press F5 in VS Code to open a sandbox environment for testing)
+# 4️⃣ Launch the Extension Development Host
+# Press F5 in VS Code to start a sandboxed testing environment
 
-# 5. Run the Syncloop Webview
-# In the Extension Development Host, open the Command Palette and execute:
-# Show Syncloop Webview
+# 5️⃣ Run the Syncloop Webview
+# Inside the Extension Development Host, open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P)
+# Then run:
+Show Syncloop Webview
+
 
 ## 📲 Packaging & Distribution
 
