@@ -1,5 +1,5 @@
 # 🚀 Syncoop Extension for Visual Studio Code
-
+> [!NOTE]
 > Seamlessly integrate the **Syncloop UI Editor** into Visual Studio Code for intuitive and powerful API service development — directly within your IDE.
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.89.0+-007ACC?logo=visualstudiocode) ![Node.js](https://img.shields.io/badge/Node.js-18.x+-3C873A?logo=node.js) ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -54,8 +54,8 @@ The extension leverages a client-server model using VS Code’s Webview API for 
 - **Diagnostics**: Logs errors to the Extension Host Output Panel for easy debugging.
 
 ---
-
-## 🛠️ Prerequisites
+> [!TIP]
+> **🛠️ Prerequisites**
 
 Ensure the following are set up before installing:
 
@@ -78,7 +78,8 @@ Obtain the latest release from the [Releases](https://github.com/coderiders22/Sy
 
 ---
 
-## 🚀 Usage
+> [!IMPORTANT]
+> **🚀 Usage**
 
 ### Step 1: Start the Syncloop Server
 The Syncloop backend must be running at `http://localhost:8080` for the extension to function. Follow these steps to set up and run the server:
