@@ -164,26 +164,13 @@ This generates: `syncoop-extension-0.0.1.vsix`
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add YourFeature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a Pull Request.
-
-For issues or suggestions, [open an issue](https://github.com/coderiders22/Syncoop-extension/issues).
-
----
-
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Manav Rai** — Project Author & Maintainer
 - **Syncloop Team** — For the editor framework and SDK
@@ -193,11 +180,3 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 For feedback or support, [open an issue](https://github.com/coderiders22/Syncoop-extension/issues) or contact the maintainer at: `manavrai454@gmail.com`
 
 ---
-3. **Table Formatting**: Aligned tables with consistent padding and clearer column headers.
-4. **Code Blocks**: Used proper Markdown code block formatting for commands.
-5. **Conciseness**: Streamlined wording where possible without losing clarity.
-6. **Visual Hierarchy**: Enhanced section headers with larger emojis and consistent formatting for better navigation.
-7. **Contributing Section**: Added a brief contributing guide to encourage collaboration.
-8. **Links**: Ensured all links (e.g., Releases, License) are clearly formatted and accessible.
-
-This version maintains all your original content while presenting it in a polished, professional, and visually appealing way. Let me know if you'd like further tweaks or specific additions!
