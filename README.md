@@ -64,7 +64,7 @@ Ensure the following are set up before installing:
 - **Syncloop Server**: Running locally at `http://localhost:8080` or a custom endpoint. Contact the repository maintainer for setup instructions if needed.
 
 ---
-
+> [!IMPORTANT]
 ## 📦 Installation
 
 ### 1. Download the `.vsix` Package
@@ -106,7 +106,8 @@ The Syncloop backend must be running at `http://localhost:8080` for the extensio
    ```
    This starts the Syncloop server at `http://localhost:8080`. Verify by opening `http://localhost:8080` in your browser to ensure the Syncloop UI Editor loads correctly.
 
-**Important**: The server must be running before launching the extension. Keep the terminal with `http-server` active during use.
+> [!CAUTION]
+The server must be running before launching the extension. Keep the terminal with `http-server` active during use.
 
 ### Step 2: Open a Workspace
 Open a folder in VS Code (`File > Open Folder`) to enable configuration saving.
