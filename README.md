@@ -1,178 +1,173 @@
-Here’s your **advanced-level GitHub README** in Markdown format, cleanly structured and formatted for a professional repository:
+# 🚀 Syncoop Extension for Visual Studio Code
+
+> Seamlessly embed the **Syncloop UI Editor** into Visual Studio Code for powerful and intuitive API service development — right from your IDE.
+
+The **Syncoop Extension** provides a rich development experience by integrating the Syncloop UI Editor directly into a Visual Studio Code Webview. Designed for modern API workflows, it combines ease of use with advanced features such as persistent local storage, configurable server endpoints, and secure sandboxing — all optimized for performance and scalability.
 
 ---
 
-```markdown
-# ⚡ Syncoop Extension for VS Code
+## 📚 Table of Contents
 
-> 🚀 Seamlessly integrate the Syncloop UI editor into Visual Studio Code for efficient API service development.
-
-The **Syncoop Extension** embeds the Syncloop UI editor into a webview within VS Code, enabling developers to **create, edit, and manage API services** without leaving their IDE. Built for performance, security, and extensibility, this extension leverages the VS Code Webview API, robust error handling, and configurable settings to deliver a streamlined API development experience.
-
----
-
-## 📑 Table of Contents
-
-- [✨ Features](#-features)  
-- [🏗️ Architecture](#️-architecture)  
-- [🛠️ Prerequisites](#️-prerequisites)  
-- [📦 Installation](#-installation)  
-- [🚀 Usage](#-usage)  
-- [⚙️ Configuration](#️-configuration)  
-- [💻 Development Setup](#-development-setup)  
-- [📲 Packaging and Distribution](#-packaging-and-distribution)  
-- [🐞 Troubleshooting](#-troubleshooting)  
-- [📅 Roadmap](#-roadmap)  
-- [🤝 Contributing](#-contributing)  
-- [📜 License](#-license)  
-- [🙏 Acknowledgments](#-acknowledgments)
+- [Features](#features)  
+- [Architecture](#architecture)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Configuration](#configuration)  
+- [Development Setup](#development-setup)  
+- [Packaging & Distribution](#packaging--distribution)  
+- [Troubleshooting](#troubleshooting)  
+- [Roadmap](#roadmap)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Acknowledgments](#acknowledgments)
 
 ---
 
 ## ✨ Features
 
-- **Embedded Syncloop UI**: Interact with the Syncloop editor directly within VS Code via an embedded iframe.
-- **Persistent Storage**: Save and load service data using `syncloop-service.json` in the workspace.
-- **Customizable Server URL**: Configure the backend URL for development or production.
-- **Security Built-In**: CSP headers and iframe sandboxing to ensure safe operation.
-- **Extensible Design**: Easily adaptable for SDK-based embedding or additional UI enhancements.
-- **Error Logging**: Friendly error messages and Extension Host logs for easier debugging.
+- **Embedded Syncloop UI**: Leverages a Webview to display the Syncloop Editor within VS Code.
+- **Local Data Persistence**: Automatically stores API service configurations in `syncloop-service.json` within your workspace.
+- **Dynamic Server Configuration**: Allows custom Syncloop backend URLs via user settings.
+- **Secure Integration**: Implements strict Content Security Policy (CSP) and iframe sandboxing.
+- **Robust Error Handling**: Provides developer-friendly error messages and detailed logging via the Extension Host.
+- **Extensible Architecture**: Built to accommodate SDK-based embedding, additional commands, and UI enhancements in future versions.
 
 ---
 
-## 🏗️ Architecture
+## 🧱 Architecture
 
-| Component         | Description |
-|-------------------|-------------|
-| **VS Code Webview** | Loads the Syncloop UI editor using an `<iframe>` and `postMessage` for interaction. |
-| **Syncloop Server** | Hosts the editor UI at `http://localhost:8080` (configurable). |
-| **Extension Logic** | Handles lifecycle, storage, and message routing using the VS Code Extension API. |
-| **Security**        | CSP and sandboxing policies ensure safe iframe embedding. |
+The extension employs a client-server design centered around VS Code’s Webview API.
 
-### Key Implementation Details:
+| Component            | Description |
+|----------------------|-------------|
+| **VS Code Webview**  | Embeds the Syncloop UI using an iframe. Communicates via `postMessage`. |
+| **Syncloop Server**  | Default: `http://localhost:8080`. Hosts the Syncloop UI Editor. Configurable by the user. |
+| **Extension Logic**  | Manages lifecycle, messaging, and file I/O using VS Code APIs. |
+| **Security Controls**| Applies CSP headers and iframe sandboxing for controlled, secure rendering. |
 
-- **Communication**: Editor uses `postMessage` to send save events.
-- **Persistence**: Saves API data using the FileSystem API to a JSON file.
-- **Debugging**: Errors are logged to the *Extension Host Output* channel.
+### Key Implementation Highlights:
+- **Message Bridge**: Communication between the editor and VS Code handled using `postMessage`.
+- **File I/O**: Utilizes VS Code's FileSystem API to store data locally.
+- **Diagnostics**: Errors are logged to the Extension Host Output Panel for easy debugging.
 
 ---
 
 ## 🛠️ Prerequisites
 
-Ensure the following before using the extension:
+Before installation, ensure the following requirements are met:
 
-- **VS Code**: v1.89.0 or higher — [Download](https://code.visualstudio.com/)
-- **Node.js**: v18.x+ — [Download](https://nodejs.org/)
-- **Syncloop Server**: Running at `http://localhost:8080`  
-  _Contact the maintainer for server setup support._
+- **Visual Studio Code**: v1.89.0 or later — [Download](https://code.visualstudio.com/)
+- **Node.js**: v18.x or higher — [Download](https://nodejs.org/)
+- **Syncloop Server**:
+  - Should be running locally (`http://localhost:8080`) or via a custom endpoint.
+  - Reach out to the repository maintainer for setup instructions if unavailable.
 
 ---
 
 ## 📦 Installation
 
-### For End Users:
+### 1. Download `.vsix` Package
 
-1. **Download** the `.vsix` file from the [Releases](#) page.
-2. **Install in VS Code**:
-   - Open the Extensions sidebar (`Ctrl+Shift+X` / `Cmd+Shift+X`).
-   - Click `...` > **Install from VSIX...**
-   - Select `syncoop-extension-0.0.1.vsix`.
+Get the latest release from the [Releases](#) section or request it from the maintainer.
 
-You should now see **Syncoop Extension** in your installed extensions.
+### 2. Install in Visual Studio Code
+
+1. Open **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+2. Click the **⋯** menu and choose **Install from VSIX**
+3. Select `syncoop-extension-0.0.1.vsix`
+4. Once installed, the extension will appear in your list
 
 ---
 
 ## 🚀 Usage
 
-### 1. Start Syncloop Server
+### Step 1: Start Syncloop Server
 
-Make sure your server is running:
-```
+Ensure the Syncloop backend is active at: `http://localhost:8080`
 
-[http://localhost:8080/index.html](http://localhost:8080/index.html)
+### Step 2: Open a Workspace
 
-````
+To enable saving, open a folder (`File > Open Folder`) in VS Code.
 
-### 2. Open a Workspace
+### Step 3: Launch the Syncloop Webview
 
-Open any folder in VS Code (`File > Open Folder`) to enable saving of data.
+- Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
+- Type: `Show Syncloop Webview`
+- Hit `Enter` — the Syncloop UI editor will load within a new Webview panel.
 
-### 3. Launch the Webview
+### Step 4: Develop Your API Services
 
-- Open the Command Palette: `Ctrl+Shift+P` / `Cmd+Shift+P`
-- Type and run: `Show Syncloop Webview`
-
-### 4. Create and Manage Services
-
-- Use the editor as you would on the web.
-- All data is saved to `syncloop-service.json` in your project.
+- Interact with the editor as you normally would.
+- All service configurations are saved to `syncloop-service.json` in your workspace root.
 
 ---
 
 ## ⚙️ Configuration
 
-Custom settings can be applied via VS Code Settings:
+You can customize the extension’s behavior using VS Code settings.
 
-| Setting | Description |
-|--------|-------------|
-| `syncoop.serviceBaseUrl` | Base URL of your Syncloop server. Default: `http://localhost:8080` |
+### Setting: Syncloop Service Base URL
 
-To configure:
-1. Open Settings: `Ctrl+,` / `Cmd+,`
-2. Search: `Syncoop`
-3. Update the **Service Base URL** as needed.
+- **Default**: `http://localhost:8080`
+
+### To Change:
+
+1. Open **Settings** (`Ctrl+,` / `Cmd+,`)
+2. Search for `Syncoop`
+3. Modify the **Syncoop: Service Base Url** field as required
+
+This allows connection to alternative environments (e.g., staging or production).
 
 ---
 
 ## 💻 Development Setup
 
-### 1. Clone the Repo
+Want to contribute or explore the source code? Follow these steps:
 
 ```bash
-git clone https://github.com/manavrai/Syncoop-extension.git
+# Clone the repository
+git clone [https://github.com/manavrai/Syncoop-extension.git](https://github.com/coderiders22/Syncoop-extension)
 cd Syncoop-extension
-````
 
-### 2. Install Dependencies
-
-```bash
+# Install dependencies
 npm install
-```
 
-### 3. Launch in Development Mode
-
-```bash
+# Open in VS Code
 code .
-```
 
-Press `F5` to start the Extension Development Host and run `Show Syncloop Webview`.
+# Launch the Extension Host
+# (Press F5 in the IDE to open a development sandbox)
 
----
-
-### 🔁 Switch to SDK Embedding (Advanced)
-
-To use the Syncloop SDK (`syncloop.min.js`) instead of the iframe:
-
-1. Modify `extension.js` to include SDK logic.
-2. Update CSP policies to allow inline/script resources.
-3. Test thoroughly — this eliminates the server dependency.
+> Tip: Run the `Show Syncloop Webview` command in the sandbox to test the integration.
 
 ---
 
-## 📲 Packaging and Distribution
+### 🧬 Advanced: SDK-Based Embedding (Optional)
 
-### Package
+The extension uses an iframe by default. To switch to embedding the Syncloop editor via the SDK (`syncloop.min.js`):
+
+1. Modify the `extension.js` logic to use the SDK.
+2. Adjust the Content Security Policy to permit necessary script sources.
+3. Test compatibility thoroughly — especially if removing the backend dependency.
+
+---
+
+## 📲 Packaging & Distribution
+
+To package the extension for local installation or distribution:
 
 ```bash
 npx @vscode/vsce package
 ```
 
-Generates `syncoop-extension-0.0.1.vsix`.
+This generates:
+`syncoop-extension-0.0.1.vsix`
 
-### Publish (Optional)
+### Optional: Publish to the Marketplace
 
-1. Create a publisher at [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
-2. Publish:
+1. Create a publisher at [marketplace.visualstudio.com](https://marketplace.visualstudio.com/)
+2. Run:
 
 ```bash
 npx @vscode/vsce publish
@@ -182,73 +177,67 @@ npx @vscode/vsce publish
 
 ## 🐞 Troubleshooting
 
-| Issue               | Fix                                                                            |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Webview not loading | Ensure server is running & URL is correct. Check Output logs (Extension Host). |
-| Data not saving     | Open a workspace folder and ensure write permissions.                          |
-| CORS issues         | Update server to allow CORS for VS Code domains.                               |
+| Issue                     | Resolution                                                                                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Webview not loading       | Ensure the Syncloop server is running and the URL is correct. Check logs in the Extension Host Output panel. |
+| Data not saving           | Confirm that a workspace folder is open and that write permissions are granted.                              |
+| CORS or Connection Errors | Ensure the Syncloop server allows cross-origin requests from VS Code’s origin.                               |
 
 ---
 
-## 📅 Roadmap
+## 🛣️ Roadmap
 
-* [ ] Multi-server support
-* [ ] UI-based testing tools for APIs
-* [ ] `syncloop-service.json` viewer/editor
-* [ ] Default SDK-based integration
-* [ ] Unit testing support
+* [ ] Support multiple server instances
+* [ ] In-editor testing suite for APIs
+* [ ] UI for editing saved service data (`syncloop-service.json`)
+* [ ] SDK embedding as the default method
+* [ ] Add unit and integration tests
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! 🛠️
+We welcome contributions from developers of all backgrounds!
 
-1. Fork the repository.
-2. Create a feature branch:
+### To contribute:
 
-   ```bash
-   git checkout -b feature/YourFeature
-   ```
-3. Commit your changes:
+```bash
+# Fork this repository
+# Create a new branch for your feature
+git checkout -b feature/my-new-feature
 
-   ```bash
-   git commit -m "Add YourFeature"
-   ```
-4. Push and create a PR:
+# Make changes, commit, and push
+git commit -m "Add my new feature"
+git push origin feature/my-new-feature
 
-   ```bash
-   git push origin feature/YourFeature
-   ```
+# Open a Pull Request on GitHub
+```
 
-*See `CONTRIBUTING.md` for more.*
+Please review our [Contributing Guidelines](CONTRIBUTING.md) before submitting a PR.
 
 ---
 
 ## 📜 License
 
-Licensed under the **MIT License**.
-See [`LICENSE`](LICENSE) for details.
+This project is licensed under the **MIT License**.
+Refer to the [LICENSE](LICENSE) file for full terms.
 
 ---
 
 ## 🙏 Acknowledgments
 
-* **Manav Rai** – Creator and Maintainer
-* **Syncloop Team** – For providing the UI editor and SDK
-* **VS Code Team** – For the powerful Extension & Webview APIs
+* **Manav Rai** — Project Author & Maintainer
+* **Syncloop Team** — For the editor framework and SDK
+* **VS Code Team** — For the exceptional tooling and Webview API
 
 ---
 
-📫 For issues or suggestions, open an [issue](https://github.com/manavrai/Syncoop-extension/issues) or reach out at: `your-email@example.com`
+For feedback, questions, or support, feel free to [open an issue](https://github.com/coderiders22/Syncoop-extension/issues) or contact the maintainer at: `manavrai454@gmail.com`
 
----
-
-*🔒 This repository and its contents are intended solely for internal use and evaluation. Do not share externally without permission.*
+> *This repository is intended for professional and educational use. Please refrain from redistributing or republishing without proper authorization.*
 
 ```
 
 ---
 
-Let me know if you'd like a separate `CONTRIBUTING.md`, `LICENSE`, or logo/banner for GitHub!
-```
+
